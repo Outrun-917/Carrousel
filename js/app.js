@@ -8,7 +8,6 @@ const $testimonialText = document.querySelector(".testimonial-text");
 const $testimonialPicture = document.querySelector(".testimonial-picture");
 
 let timer;
-let sec = 30;
 
 const testimonials = [
   {
@@ -99,13 +98,8 @@ function moveRight() {
   }
 }
 
-$nextButton.addEventListener("click", function () {
+$nextButton.addEventListener("click", async function () {
   moveRight();
-  //   $mainWrapper.classList.add("transition");
-  //   setTimeout(function () {
-  //     moveRight();
-  //   }, 300);
-  //   $mainWrapper.classList.remove("transition");
 });
 
 $previousButton.addEventListener("click", function () {
@@ -129,10 +123,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function timer() {
     timer = setInterval(function () {
       moveRight();
-      sec--;
-      if (sec <= 0) {
-        clearInterval(timer);
-      }
     }, 10000);
     timer();
   }
