@@ -52,49 +52,81 @@ let currentSlide = 0;
 
 function moveLeft() {
   if (currentSlide === 0) {
-    currentSlide = 3;
-    $testimonialAuthor.textContent = testimonials[currentSlide].author;
-    $testimonialPosition.textContent = testimonials[currentSlide].position;
-    $testimonialText.textContent = testimonials[currentSlide].content;
-    $testimonialPicture.setAttribute("src", testimonials[currentSlide].picture);
-    $testimonialPicture.setAttribute(
-      "alt",
-      testimonials[currentSlide].pictureDescription
-    );
+    $mainWrapper.classList.add("transition");
+
+    setTimeout(() => {
+      currentSlide = 3;
+      $testimonialAuthor.textContent = testimonials[currentSlide].author;
+      $testimonialPosition.textContent = testimonials[currentSlide].position;
+      $testimonialText.textContent = testimonials[currentSlide].content;
+      $testimonialPicture.setAttribute(
+        "src",
+        testimonials[currentSlide].picture
+      );
+      $testimonialPicture.setAttribute(
+        "alt",
+        testimonials[currentSlide].pictureDescription
+      );
+      $mainWrapper.classList.remove("transition");
+    }, 300);
   } else {
-    currentSlide--;
-    $testimonialAuthor.textContent = testimonials[currentSlide].author;
-    $testimonialPosition.textContent = testimonials[currentSlide].position;
-    $testimonialText.textContent = testimonials[currentSlide].content;
-    $testimonialPicture.setAttribute("src", testimonials[currentSlide].picture);
-    $testimonialPicture.setAttribute(
-      "alt",
-      testimonials[currentSlide].pictureDescription
-    );
+    $mainWrapper.classList.add("transition");
+
+    setTimeout(() => {
+      currentSlide--;
+      $testimonialAuthor.textContent = testimonials[currentSlide].author;
+      $testimonialPosition.textContent = testimonials[currentSlide].position;
+      $testimonialText.textContent = testimonials[currentSlide].content;
+      $testimonialPicture.setAttribute(
+        "src",
+        testimonials[currentSlide].picture
+      );
+      $testimonialPicture.setAttribute(
+        "alt",
+        testimonials[currentSlide].pictureDescription
+      );
+      $mainWrapper.classList.remove("transition");
+    }, 300);
   }
 }
 
 function moveRight() {
   if (currentSlide === 3) {
-    currentSlide = 0;
-    $testimonialAuthor.textContent = testimonials[currentSlide].author;
-    $testimonialPosition.textContent = testimonials[currentSlide].position;
-    $testimonialText.textContent = testimonials[currentSlide].content;
-    $testimonialPicture.setAttribute("src", testimonials[currentSlide].picture);
-    $testimonialPicture.setAttribute(
-      "alt",
-      testimonials[currentSlide].pictureDescription
-    );
+    $mainWrapper.classList.add("transition");
+
+    setTimeout(() => {
+      currentSlide = 0;
+      $testimonialAuthor.textContent = testimonials[currentSlide].author;
+      $testimonialPosition.textContent = testimonials[currentSlide].position;
+      $testimonialText.textContent = testimonials[currentSlide].content;
+      $testimonialPicture.setAttribute(
+        "src",
+        testimonials[currentSlide].picture
+      );
+      $testimonialPicture.setAttribute(
+        "alt",
+        testimonials[currentSlide].pictureDescription
+      );
+      $mainWrapper.classList.remove("transition");
+    }, 300);
   } else {
-    currentSlide++;
-    $testimonialAuthor.textContent = testimonials[currentSlide].author;
-    $testimonialPosition.textContent = testimonials[currentSlide].position;
-    $testimonialText.textContent = testimonials[currentSlide].content;
-    $testimonialPicture.setAttribute("src", testimonials[currentSlide].picture);
-    $testimonialPicture.setAttribute(
-      "alt",
-      testimonials[currentSlide].pictureDescription
-    );
+    $mainWrapper.classList.add("transition");
+
+    setTimeout(() => {
+      currentSlide++;
+      $testimonialAuthor.textContent = testimonials[currentSlide].author;
+      $testimonialPosition.textContent = testimonials[currentSlide].position;
+      $testimonialText.textContent = testimonials[currentSlide].content;
+      $testimonialPicture.setAttribute(
+        "src",
+        testimonials[currentSlide].picture
+      );
+      $testimonialPicture.setAttribute(
+        "alt",
+        testimonials[currentSlide].pictureDescription
+      );
+      $mainWrapper.classList.remove("transition");
+    }, 300);
   }
 }
 
